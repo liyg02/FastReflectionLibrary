@@ -1,0 +1,4 @@
+FastReflectionLib uses the reflection objects (such as PropertyInfo) as key to cache the worker object (such as PropertyAccessor). But in some scenarios, we can cache the worker objects by your own. Here's an sample web site "CustomCache" release with the source of FastReflectionLib, which contains a series of overloaded FastEval extension methods that can be used as an efficient replacement for the build-in Eval method in some cases. The sample:
+* uses both the Type of class and the property name as a "joint key" to cache the PropertyAccessor objects.
+* uses PropertyAccessor to get the value of property defined in an "anonymous object".
+* caches in the scope of "page" instead of the whole AppDomain.
